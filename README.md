@@ -125,6 +125,7 @@ aws configure
                       --version=1.30 \
                       --without-nodegroup
   ```
+### Go to AWS CloudFormation, you should see ***eksctl-mega-cluster*** created (might take 15 to 20 minutes)
   - <b>Associate IAM OIDC Provider (Master machine)</b>
   ```bash
   eksctl utils associate-iam-oidc-provider \
