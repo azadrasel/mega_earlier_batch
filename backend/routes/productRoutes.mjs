@@ -1,13 +1,13 @@
-const { Router } = require('express');
+import { Router } from 'express'; 
 
-const {
+import {
   getAllProducts,
   createProduct,
-} = require('../controllers/productController');
+} from '../controllers/productController.mjs';
 
 const productRouter = Router();
 
 productRouter.post('/api/products', createProduct);
 productRouter.get('/api/products', getAllProducts);
 
-module.exports = productRouter;
+export default productRouter;
