@@ -125,7 +125,7 @@ aws configure
   eksctl version
   ```
   
-  - <b>Create EKS Cluster (Master machine)</b>
+  - <b>Create EKS Cluster (Master machine - it might take 15 to 20 minutes)</b>
   ```bash
   eksctl create cluster --name=mega \
                       --region=us-west-2 \
@@ -135,8 +135,8 @@ aws configure
   - <b> Check clusters
     ```bash
       eksctl get clusters -o json
+      Go to AWS CloudFormation, you should see ***eksctl-mega-cluster***
     ```
-  - <b>Go to AWS CloudFormation, you should see ***eksctl-mega-cluster*** created (might take 15 to 20 minutes)</b>
   - <b>Associate IAM Open ID Connect provider (OIDC Provider) on Master machine</b>
   ```bash
   eksctl utils associate-iam-oidc-provider \
